@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/webhook.ts": {
+      "maxDuration": 30,
+      "memory": 512
+    },
+    "api/payments/crypto.ts": {
+      "maxDuration": 15,
+      "memory": 256
+    },
+    "api/payments/boosty.ts": {
+      "maxDuration": 15,
+      "memory": 256
+    },
+    "api/cron/follow-up.ts": {
+      "maxDuration": 60,
+      "memory": 512
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/follow-up",
+      "schedule": "0 * * * *"
+    }
+  ],
+  "rewrites": [
+    { "source": "/webhook", "destination": "/api/webhook" },
+    { "source": "/payments/crypto", "destination": "/api/payments/crypto" },
+    { "source": "/payments/boosty", "destination": "/api/payments/boosty" }
+  ]
+}
