@@ -4,7 +4,7 @@
   "private": true,
   "description": "Telegram bot funnel for Pinterest traffic with Boosty + Crypto Pay monetization",
   "engines": {
-    "node": ">=18.x"
+    "node": "20.x"
   },
   "scripts": {
     "build": "tsc --noEmit",
@@ -21,7 +21,6 @@
     "@types/node": "^20.14.0",
     "@vercel/node": "^3.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
-    "vercel": "^37.0.0"
+    "typescript": "^5.5.4"
   }
 }
