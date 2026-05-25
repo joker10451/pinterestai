@@ -5,7 +5,9 @@ import { reminder24h } from '../../src/bot/messages';
 import { env } from '../../src/config/env';
 import { findUsersDueForReminder, markReminded } from '../../src/lib/repo';
 
-const BATCH_LIMIT = 50;
+// Vercel Hobby allows only one cron firing per day, so the reminder window is 24–48h
+// after join. Keep the batch large enough to drain a typical day's signups in one run.
+const BATCH_LIMIT = 200;
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   // Vercel Cron injects `Authorization: Bearer ${CRON_SECRET}`. Reject everything else.
