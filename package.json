@@ -1,0 +1,29 @@
+{
+  "name": "pinterest-telegram-funnel-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Telegram bot funnel for Pinterest traffic monetization with Boosty (fiat) and Crypto Pay (crypto) gateways.",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "dev": "vercel dev",
+    "deploy": "vercel --prod",
+    "set-webhook": "ts-node scripts/set-webhook.ts"
+  },
+  "dependencies": {
+    "@grammyjs/runner": "^2.0.3",
+    "firebase-admin": "^12.1.0",
+    "grammy": "^1.21.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@vercel/node": "^3.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vercel": "^34.2.7"
+  }
+}
