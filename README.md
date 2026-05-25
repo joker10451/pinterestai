@@ -5,7 +5,7 @@ Serverless Telegram bot that:
 1. Receives international Pinterest traffic via deep-link `t.me/<BotName>?start=pin_tracker`.
 2. Registers the user in Firestore and delivers a free lead magnet.
 3. Upsells Premium access through **Crypto Pay** (USDT / TON) and **Boosty** (RUB).
-4. Sends a 24h follow-up reminder via a Vercel cron job.
+4. Sends a follow-up reminder via a Vercel cron job (runs once daily on the Hobby plan; users are reminded 24–48h after joining).
 
 ## Stack
 
